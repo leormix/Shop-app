@@ -1,0 +1,155 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.app {
+    .shop_cart {
+        display: flex;
+        justify-content: right;
+        align-items: end;
+    }
+}
+
+.main-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* --- СЕТКА ТОВАРОВ --- */
+.products {
+    flex: 1;
+    display: grid;
+    gap: 30px;
+    /* Расстояние между карточками */
+
+    /* ПО УМОЛЧАНИЮ (Большие экраны): 3 КОЛОНКИ */
+    grid-template-columns: repeat(3, 1fr);
+
+    .product_names {
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+    }
+}
+
+
+.card {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+        border-radius: 12px;
+    }
+
+    /* Если эмодзи вместо фото */
+    .product_emojis {
+        font-size: 5rem;
+        margin: 20px 0;
+    }
+
+    h3,
+    p {
+        margin: 0;
+        font-size: 1.1rem;
+    }
+
+    button {
+        padding: 12px 20px;
+        width: 100%;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 8px;
+        margin-top: auto;
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        /* Ровно 2 колонки */
+    }
+}
+
+/* 2. ТЕЛЕФОНЫ (меньше 768px) -> 1 КОЛОНКА */
+/* App.scss - В САМОМ НИЗУ */
+
+@media screen and (max-width: 768px) {
+
+    #root {
+        padding: 1rem;
+        /* Меньше отступы от краев экрана */
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+        /* 1 колонка */
+        width: 100%;
+        gap: 20px;
+    }
+
+    .card {
+        width: auto;
+        padding: 15px;
+
+        img {
+            height: 220px;
+        }
+
+        h4.product_names {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        button {
+            padding: 12px;
+            /* Чуть компактнее кнопка */
+            margin-top: 10px;
+        }
+    }
+
+    .navbar {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media screen and (max-width: 490) {
+    .card{
+        img{
+            width: 150px;
+        }
+    }
+}
+
+/* Анимация для корзины */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
