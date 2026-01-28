@@ -1,9 +1,10 @@
 import { useLocation } from "react-router-dom";
+import BuyButton from "../Components/BuyButton/BuyButton";
 
 const PANTS_TYPES = [
-    { id: 1, name: "Blue Pants", price: 120, image: '/src/img/sweaters/blue-sweater.png' },
-    { id: 2, name: "Green Pants", price: 70, image: '🩳' },
-    { id: 3, name: "Red Pants", price: 70, image: '' },
+    { id: 1, name: "Brown pants", price: 120, image: '/src/img/pants/brown-pants.png' },
+    { id: 2, name: "Swamp pants", price: 70, image: '/src/img/pants/swamp-pants.png' },
+    { id: 3, name: "Black pants", price: 70, image: '/src/img/pants/black-pants.png' },
 ]
 
 export default function Pants({ addToCart }) {
@@ -23,7 +24,7 @@ export default function Pants({ addToCart }) {
                             <h4 className='product_names'>{product.name}</h4>
                             <p>Price: ${product.price}</p>
 
-                            <button onClick={() => addToCart(product)}>Buy</button>
+                            <BuyButton product={product} addToCart={addToCart} />
                         </div>
                     ))
                 }

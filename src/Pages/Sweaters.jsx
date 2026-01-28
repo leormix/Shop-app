@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import BuyButton from "../Components/BuyButton/BuyButton";
 
 const SWEATERS_TYPES = [
     { id: 1, name: "Blue sweater", price: 120, image: '/src/img/sweaters/blue-sweater.png' },
@@ -25,7 +26,7 @@ export default function Sweaters({ addToCart }) {
                             <h4 className='product_names'>{product.name}</h4>
                             <p>Price: ${product.price}</p>
 
-                            <button onClick={() => addToCart(product)}>Buy</button>
+                            <BuyButton product={product} addToCart={addToCart} />
                         </div>
                     ))
                 }

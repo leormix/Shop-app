@@ -28,15 +28,12 @@
           align-items: flex-start;
 }
 
-/* --- СЕТКА ТОВАРОВ --- */
 .products {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   display: grid;
   gap: 30px;
-  /* Расстояние между карточками */
-  /* ПО УМОЛЧАНИЮ (Большие экраны): 3 КОЛОНКИ */
   grid-template-columns: repeat(3, 1fr);
 }
 .products .product_names {
@@ -65,6 +62,10 @@
           align-items: center;
   gap: 15px;
   /* Если эмодзи вместо фото */
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 .card img {
   width: 100%;
@@ -89,20 +90,29 @@
   cursor: pointer;
   border-radius: 8px;
   margin-top: auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.card button.added {
+  background-color: #2ecc71;
+  color: white;
+  border-color: #2ecc71;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.card:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 @media screen and (max-width: 1100px) {
   .products {
     grid-template-columns: repeat(2, 1fr);
-    /* Ровно 2 колонки */
   }
 }
-/* 2. ТЕЛЕФОНЫ (меньше 768px) -> 1 КОЛОНКА */
-/* App.scss - В САМОМ НИЗУ */
 @media screen and (max-width: 768px) {
   #root {
     padding: 1rem;
-    /* Меньше отступы от краев экрана */
   }
   .main-container {
     -webkit-box-orient: vertical;
@@ -112,7 +122,6 @@
   }
   .products {
     grid-template-columns: 1fr;
-    /* 1 колонка */
     width: 100%;
     gap: 20px;
   }
@@ -129,7 +138,6 @@
   }
   .card button {
     padding: 12px;
-    /* Чуть компактнее кнопка */
     margin-top: 10px;
   }
   .navbar {
@@ -141,7 +149,6 @@
     width: 150px;
   }
 }
-/* Анимация для корзины */
 @-webkit-keyframes slideIn {
   from {
     opacity: 0;

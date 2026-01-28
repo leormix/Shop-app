@@ -1,0 +1,196 @@
+.app {
+  padding-top: 120px;
+}
+
+.site-header {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  z-index: 1000;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: sans-serif;
+}
+
+.top-bar {
+  background-color: #fff;
+  font-size: 0.75rem;
+  padding: 5px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.top-bar .top-links span {
+  margin-left: 20px;
+  cursor: pointer;
+  color: #333;
+}
+.top-bar .top-links span:hover {
+  text-decoration: underline;
+}
+
+.main-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 30px 15px 30px;
+  height: 50px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-style: italic;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.logo:hover {
+  color: #113acf;
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+.main-nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.main-nav a:hover {
+  border-bottom: 2px solid black;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.search-box {
+  position: relative;
+}
+.search-box input {
+  background-color: #eceff1;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  width: 150px;
+  font-weight: 600;
+}
+.search-box input::-webkit-input-placeholder {
+  color: #555;
+}
+.search-box input::-moz-placeholder {
+  color: #555;
+}
+.search-box input:-ms-input-placeholder {
+  color: #555;
+}
+.search-box input::-ms-input-placeholder {
+  color: #555;
+}
+.search-box input::placeholder {
+  color: #555;
+}
+.search-box button {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.icons .icon-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+}
+.icons .icon-btn .badge {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background-color: #0071bd;
+  color: white;
+  font-size: 0.7rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+  .icons {
+    margin-top: 20px;
+  }
+  .logo {
+    display: none;
+  }
+  .main-nav,
+  .top-bar {
+    margin-top: 25px;
+  }
+  .search-box {
+    margin-top: 20px;
+  }
+  .search-box input {
+    display: none;
+  }
+  .search-box button {
+    left: -25px;
+  }
+  .site-header {
+    top: 0;
+  }
+  .app {
+    padding-top: 80px;
+  }
+}

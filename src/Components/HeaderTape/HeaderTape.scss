@@ -1,0 +1,40 @@
+
+.tape-container {
+    position: fixed;   /* Приклеиваем к экрану */
+    top: 0;
+    left: 0;
+    width: 100%;       /* На всю ширину */
+    z-index: 2000;     /* Поверх всего (даже поверх гамбургера) */
+    
+    background-color: #111;
+    color: #fff;
+    overflow: hidden;
+    padding: 10px 0;
+    
+    white-space: nowrap;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    
+    /* Тень, чтобы отделить от контента */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.tape-track {
+    display: inline-block;
+    /* Анимация: имя, время (чем больше, тем медленнее), линейность, бесконечность */
+    animation: scroll 60s linear infinite;
+}
+
+/* Сама анимация движения */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        /* Сдвигаем на большую величину влево */
+        transform: translateX(-50%);
+    }
+}
