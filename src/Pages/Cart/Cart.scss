@@ -169,6 +169,13 @@
         padding: 15px 30px;
         text-decoration: none;
         font-weight: bold;
+
+        border-radius: 10px;
+
+        &:hover{
+            transition: all 0.2 ease;
+            background-color: #113acf;
+        }
     }
 }
 

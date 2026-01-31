@@ -1,11 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
 #root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
     text-align: center;
+    width: 100%;
 }
 
 .app {
+    padding-top: 0;
+    width: 100%;
     .shop_cart {
         display: flex;
         justify-content: right;
@@ -14,9 +24,12 @@
 }
 
 .main-container {
-    display: flex;
+    display: block;
     gap: 40px;
     align-items: flex-start;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 
@@ -31,13 +44,18 @@
     .product_names {
         margin-bottom: 5px;
         font-size: 1.2rem;
+        color: black;
+    }
+
+    .product_prices{
+        color: black;
     }
 }
 
 
 .card {
     padding: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
@@ -47,6 +65,8 @@
     align-items: center;
     gap: 15px;
 
+    background-color: #ccc;
+
 
     img {
         width: 100%;
@@ -55,16 +75,13 @@
         border-radius: 12px;
     }
 
-    /* Если эмодзи вместо фото */
-    .product_emojis {
-        font-size: 5rem;
-        margin: 20px 0;
-    }
+
 
     h3,
     p {
         margin: 0;
         font-size: 1.1rem;
+        // color: black;
     }
 
     button {

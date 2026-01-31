@@ -5,7 +5,8 @@ import HeaderTape from './Components/HeaderTape/HeaderTape'
 import Cart from '/src/Pages/Cart/Cart'
 import Pants from '/src/Pages/Pants'
 import Sweaters from './Pages/Sweaters'
-import Header from './Components/Navbar/Navbar'
+import Socks from './Pages/Socks'
+import Navbar from './Components/Navbar/Navbar'
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
 
         <HeaderTape></HeaderTape>
 
-        <Header cartCount={cartItemCount} />
+        <Navbar cartCount={cartItemCount} />
 
         <div className="main-container">
 
@@ -47,6 +48,8 @@ function App() {
               element={<Pants addToCart={addToCart}></Pants>}></Route>
             <Route path='/Sweaters'
               element={<Sweaters addToCart={addToCart}></Sweaters>}></Route>
+            <Route path='/Socks'
+              element={<Socks addToCart={addToCart}></Socks>}></Route>
 
             <Route path='/cart' element={
               <Cart cart={cart} removeFromCart={removeFromCart} />

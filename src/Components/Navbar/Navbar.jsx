@@ -1,8 +1,9 @@
 import '/src/Components/Navbar/Navbar.css'
+import Dropdown_menu from '../DropDown_menu/DropDown_menu';
 
 import { Link } from 'react-router-dom';
 
-export default function Header({ cartCount }) {
+export default function Navbar({ cartCount }) {
     return (
         <header className="site-header">
             <div className="top-bar">
@@ -10,16 +11,13 @@ export default function Header({ cartCount }) {
 
             <div className="main-bar">
 
-
                 <Link to="/" className="logo">My SHOP
                 </Link>
-
-
                 <nav className="main-nav">
-                    <Link to="/Pants">PANTS</Link>
-                    <Link to="/Sweaters">SWEATERS</Link>
-                </nav>
 
+                    <Dropdown_menu></Dropdown_menu>
+
+                </nav>
 
                 <div className="actions">
                     <div className="search-box">
@@ -29,7 +27,7 @@ export default function Header({ cartCount }) {
 
                     <div className="icons">
                         <button className="icon-btn">👤</button>
-                        <Link to='/cart' className='icon-btn cart-icon'>
+                        <Link to='/Cart' className='icon-btn cart-icon'>
                             🛍️
                             {cartCount > 0 && <span className="badge">{cartCount}</span>}</Link>
                     </div>

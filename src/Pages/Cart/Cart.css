@@ -165,6 +165,12 @@
   padding: 15px 30px;
   text-decoration: none;
   font-weight: bold;
+  border-radius: 10px;
+}
+.empty-cart-page .start-shopping-btn:hover {
+  -webkit-transition: all 0.2 ease;
+  transition: all 0.2 ease;
+  background-color: #113acf;
 }
 
 @media screen and (max-width: 768px) {

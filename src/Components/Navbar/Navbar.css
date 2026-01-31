@@ -1,10 +1,10 @@
 .app {
-  padding-top: 120px;
+  padding-top: 0px;
 }
 
 .site-header {
-  position: fixed;
-  top: 40px;
+  position: relative;
+  top: 0;
   left: 0;
   width: 100%;
   background-color: #ffffff;
@@ -45,6 +45,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 30px 15px 30px;
+  position: relative;
   height: 50px;
 }
 
@@ -67,20 +68,26 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 30px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  gap: 100px;
 }
-.main-nav a {
+.main-nav span {
   text-decoration: none;
   color: black;
   font-weight: 700;
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-top: 8px;
 }
-.main-nav a:hover {
-  border-bottom: 2px solid black;
+.main-nav span:hover {
+  color: #113acf;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
+  cursor: pointer;
 }
 
 .actions {
@@ -144,6 +151,7 @@
   cursor: pointer;
   padding: 0;
   position: relative;
+  top: -2px;
 }
 .icons .icon-btn .badge {
   position: absolute;

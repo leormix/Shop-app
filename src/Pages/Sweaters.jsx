@@ -24,7 +24,7 @@ export default function Sweaters({ addToCart }) {
                         <div key={product.id} className='card'>
                             <img className='product_images' src={product.image} alt="Waiting..."></img>
                             <h4 className='product_names'>{product.name}</h4>
-                            <p>Price: ${product.price}</p>
+                            <p className="product_prices">Price: ${product.price}</p>
 
                             <BuyButton product={product} addToCart={addToCart} />
                         </div>

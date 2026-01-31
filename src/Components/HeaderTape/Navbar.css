@@ -1,0 +1,82 @@
+.main-bar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  padding: 0 40px;
+  background-color: white;
+  border-bottom: 1px solid #e5e5e5;
+  z-index: 500;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-style: italic;
+  color: black;
+  text-decoration: none;
+  width: 200px;
+}
+
+.main-nav {
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+  height: 100%;
+}
+
+.actions {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.actions .search-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+.actions .search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+.actions .search-box button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.actions .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+.actions .icons .icon-btn {
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}

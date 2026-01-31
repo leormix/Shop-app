@@ -1,11 +1,22 @@
-@charset "UTF-8";
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.app {
+  padding-top: 0;
+  width: 100%;
+}
 .app .shop_cart {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19,13 +30,14 @@
 }
 
 .main-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   gap: 40px;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .products {
@@ -39,11 +51,15 @@
 .products .product_names {
   margin-bottom: 5px;
   font-size: 1.2rem;
+  color: black;
+}
+.products .product_prices {
+  color: black;
 }
 
 .card {
   padding: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   border-radius: 16px;
   -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -61,7 +77,7 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 15px;
-  /* Если эмодзи вместо фото */
+  background-color: #ccc;
   -webkit-transition: -webkit-transform 0.2s ease;
   transition: -webkit-transform 0.2s ease;
   transition: transform 0.2s ease;
@@ -73,10 +89,6 @@
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 12px;
-}
-.card .product_emojis {
-  font-size: 5rem;
-  margin: 20px 0;
 }
 .card h3,
 .card p {

@@ -1,24 +1,22 @@
 import { useLocation } from "react-router-dom";
 import BuyButton from "../Components/BuyButton/BuyButton";
 
-const PANTS_TYPES = [
-    { id: 1, name: "Brown pants", price: 120, image: '/src/img/pants/brown-pants.png' },
-    { id: 2, name: "Swamp pants", price: 70, image: '/src/img/pants/swamp-pants.png' },
-    { id: 3, name: "Black pants", price: 70, image: '/src/img/pants/black-pants.png' },
+const SOCKS_TYPES = [
+    { id: 1, name: "Fish socks", price: 10, image: '/src/img/socks/fish-socks.png' },
+    { id: 2, name: "Frog socks", price: 25, image: '/src/img/socks/frog-socks.png' },
+    { id: 3, name: "Cat socks", price: 40, image: '/src/img/socks/cat-socks.png' },
 ]
 
-export default function Pants({ addToCart }) {
+export default function Socks({ addToCart }) {
 
     const location = useLocation();
-
     return (
         <div>
-
-            {location.pathname === '/Pants' ? <h1>Pants</h1> : <div></div>}
+            {location.pathname === '/Socks' ? <h1>Socks</h1> : <div></div>}
 
             < div className="products" >
                 {
-                    PANTS_TYPES.map((product) => (
+                    SOCKS_TYPES.map((product) => (
                         <div key={product.id} className='card'>
                             <img className='product_images' src={product.image} alt="Waiting..."></img>
                             <h4 className='product_names'>{product.name}</h4>
