@@ -1,0 +1,191 @@
+.main-bar {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+
+  height: 80px;
+  padding: 0 40px;
+  background-color: white;
+  border-bottom: 1px solid #e5e5e5;
+  z-index: 500;
+}
+
+
+.logo {
+
+  transition: all 0.2s ease;
+
+
+  font-size: 1.5rem;
+  font-weight: 900;
+  
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+
+
+  width: 200px;
+
+
+  &:hover{
+
+    color: darkorchid;
+  }
+}
+
+
+.main-nav {
+
+  position: relative;
+
+
+  margin-left: auto;
+  margin-right: auto;
+
+
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  height: 100%;
+}
+
+
+.actions {
+  width: 200px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+
+  .search-box {
+
+    display: flex;
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 4px;
+
+    input {
+      border: none;
+      background: transparent;
+      outline: none;
+    }
+
+    button {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+  }
+
+  .icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    .icon-btn {
+      font-size: 1.2rem;
+      cursor: pointer;
+      border: none;
+      background: none;
+      display: flex;  
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      text-decoration: none;
+    }
+    .badge {
+      position: absolute;
+      top: 35px;
+      right: 30px;
+
+      background-color: #ff3b30;
+      color: white;
+
+      font-size: 0.7rem;
+      font-weight: 700;
+      font-family: sans-serif;
+
+      min-width: 10px;
+      height: 18px;
+      padding: 0 4px;
+      border-radius: 10px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+
+      border: 2px solid #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+      z-index: 2;
+    }
+  }
+}
+
+.mobile-menu-trigger {
+  display: none;
+}
+
+@media screen and (max-width: 930px) {
+
+  .mobile-menu-trigger {
+    display: block;
+    margin-right: auto;
+
+  }
+
+
+  .main-nav {
+    display: none;
+  }
+
+
+  .logo {
+    display: none;
+  }
+
+  .icons {
+    margin-top: 0;
+
+  }
+
+
+  .search-box button {
+    position: static;
+
+    transform: none;
+  }
+
+
+  .search-box input {
+
+    width: 70px;
+
+  }
+
+  .site-header {
+    top: 0;
+  }
+
+
+}
+
+@media only screen and (min-device-width: 900px) and (max-device-width: 1110px){
+  .main-nav{
+    right: 90px;
+  }
+
+}
+
+
+@media only screen and (max-device-width: 353px){
+  .search-box{
+    input{
+      display: none;
+    }
+  }
+
+} 

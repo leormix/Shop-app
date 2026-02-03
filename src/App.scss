@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#root {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.app {
+    padding-top: 0;
+    width: 100%;
+    .shop_cart {
+        display: flex;
+        justify-content: right;
+        align-items: end;
+    }
+}
+
+.main-container {
+    display: block;
+    gap: 40px;
+    align-items: flex-start;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+
+.products {
+
+    flex: 1;
+    display: grid;
+    gap: 30px;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    .product_names {
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+        color: black;
+    }
+
+    .product_prices{
+        color: black;
+    }
+}
+
+
+.main-photo-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    // Отступы между картинками (как на твоем референсе)
+    gap: 20px;
+
+    // Высота всей секции. Можно задать фиксированную или зависящую от экрана
+    height: 72.5vh;
+    width: 100%;
+    max-width: 1400px; // Ограничиваем ширину для больших экранов
+    margin: 0 auto;
+    margin-top: -40px;
+
+
+    // Назначаем имена областям сетки
+    grid-template-areas:
+        "main top"
+        "main bottom";
+
+    @media (max-width: 768px) {
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "main"
+            "top"
+            "bottom";
+    }
+
+    .grid-item {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    .item-main {
+        grid-area: main;
+    }
+
+    .item-top {
+        grid-area: top;
+    }
+
+    .item-bottom {
+        grid-area: bottom;
+    }
+}
+
+.card {
+    padding: 15px;
+    // border: 1px solid black;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    background-color: #eaeff0;
+
+
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+        border-radius: 12px;
+    }
+
+
+
+    h3,
+    p {
+        margin: 0;
+        font-size: 1.1rem;
+    }
+
+    button {
+        padding: 12px 20px;
+        width: 100%;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 8px;
+        margin-top: auto;
+
+        transition: all 0.3s ease;
+
+        &.added {
+            background-color: #2ecc71;
+
+            color: white;
+            border-color: #2ecc71;
+            transform: scale(1.05);
+        }
+    }
+
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.03);
+
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 1100px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .card {
+        width: auto;
+        padding: 15px;
+
+        img {
+            height: 220px;
+        }
+
+        h4.product_names {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        button {
+            padding: 12px;
+            margin-top: 10px;
+        }
+    }
+
+    .navbar {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media screen and (max-width: 490) {
+    .card{
+        img{
+            width: 150px;
+        }
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

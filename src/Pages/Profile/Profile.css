@@ -1,0 +1,150 @@
+.profile-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  min-height: 80vh;
+  margin-top: 50px;
+}
+
+.login-side,
+.signup-side {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login-btns {
+  margin-top: -20px;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.login-btns .facebook-btn {
+  border: 1px solid black;
+  width: 160px;
+  color: #1a1a1a;
+  font-weight: bold;
+  background-color: #fff;
+  padding: 15px;
+  text-transform: uppercase;
+  margin-left: -15px;
+  cursor: pointer;
+  text-align: left;
+}
+.login-btns .google-btn {
+  border: 1px solid black;
+  width: 160px;
+  color: #1a1a1a;
+  font-weight: bold;
+  background-color: #fff;
+  padding: 15px;
+  text-transform: uppercase;
+  margin-left: -15px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.form-content {
+  width: 100%;
+  max-width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.forgot-pass {
+  color: #000;
+  text-decoration: underline;
+  font-size: 14px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  padding: 15px;
+  border: 1px solid #767676;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #000;
+}
+
+.btn-black {
+  background-color: #000;
+  color: #fff;
+  padding: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-device-width: 1015px) {
+  .profile-main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .login-side,
+  .signup-side {
+    width: 100%;
+  }
+  .signup-side {
+    margin-top: 100px;
+  }
+  .signup-side .btn-black {
+    margin-top: -20px;
+  }
+  .signup-side p {
+    margin-top: -20px;
+  }
+}
