@@ -7,8 +7,8 @@
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  min-height: 80vh;
-  margin-top: 50px;
+  min-height: 65vh;
+  margin-top: 40px;
 }
 
 .login-side,

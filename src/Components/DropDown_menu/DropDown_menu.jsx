@@ -40,9 +40,8 @@ export default function Dropdown_menu() {
                         <div className="menu-column">
                             <h4 className="column-title">SHOES</h4>
                             <Link to="/sneakers" onClick={closing}>Sneakers</Link>
-                            <Link to="/running" onClick={closing}>Running</Link>
                             <Link to="/slides" onClick={closing}>Slides & Sandals</Link>
-                            <Link to="/originals" onClick={closing}>Originals</Link>
+                            <Link to="/originals" onClick={closing}>Runners</Link>
                         </div>
 
 

@@ -6,6 +6,7 @@ import Cart from '/src/Pages/Cart/Cart'
 import Pants from '/src/Pages/Pants'
 import Sweaters from './Pages/Sweaters'
 import Socks from './Pages/Socks'
+import Sneakers from './Pages/Sneakers'
 import Profile from './Pages/Profile/Profile'
 import Navbar from './Components/Navbar/Navbar'
 import { Route, Routes, useLocation } from 'react-router-dom'
@@ -71,16 +72,24 @@ function App() {
           )}
 
           <Routes>
-            <Route path='/Pants'
+            <Route path='/pants'
               element={<Pants addToCart={addToCart}></Pants>}></Route>
-            <Route path='/Sweaters'
+
+            <Route path='/sweaters'
               element={<Sweaters addToCart={addToCart}></Sweaters>}></Route>
-            <Route path='/Socks'
+
+            <Route path='/socks'
               element={<Socks addToCart={addToCart}></Socks>}></Route>
+
+            <Route path='/sneakers'
+              element={<Sneakers addToCart={addToCart}></Sneakers>}></Route>
+
             <Route path='/cart'
               element={<Cart cart={cart} removeFromCart={removeFromCart} />}></Route>
+
             <Route path='/profile'
               element={<Profile />}></Route>
+
 
 
           </Routes>
@@ -93,4 +102,4 @@ function App() {
   )
 }
 
-export default App
+export default App  

@@ -58,18 +58,17 @@ body {
 
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    // Отступы между картинками (как на твоем референсе)
+
     gap: 20px;
 
-    // Высота всей секции. Можно задать фиксированную или зависящую от экрана
     height: 72.5vh;
     width: 100%;
-    max-width: 1400px; // Ограничиваем ширину для больших экранов
+    max-width: 1400px;
     margin: 0 auto;
     margin-top: -40px;
 
 
-    // Назначаем имена областям сетки
+
     grid-template-areas:
         "main top"
         "main bottom";
@@ -113,7 +112,7 @@ body {
 
 .card {
     padding: 15px;
-    // border: 1px solid black;
+
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
@@ -168,9 +167,6 @@ body {
     }
 
 }
-
-
-
 
 @media screen and (max-width: 1100px) {
     .products {
