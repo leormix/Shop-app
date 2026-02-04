@@ -14,7 +14,7 @@ export default function ProductPage({ addToCart }) {
     if (!product) {
         return (
             <div style={{ padding: '20px', textAlign: 'center' }}>
-                <h2>Товар не найден</h2>
+                <h2>Product not found</h2>
                 <button onClick={() => navigate(-1)}>Назад</button>
             </div>
         );
@@ -33,17 +33,17 @@ export default function ProductPage({ addToCart }) {
 
             <div className="product-info">
                 <h1>{product.name}</h1>
-                <h3 style={{ color: '#555' }}>Цена: ${product.price}</h3>
+                <h3 style={{ color: '#555' }}>Price: ${product.price}</h3>
 
                 <p style={{ margin: '20px 0', maxWidth: '400px' }}>
-                    {product.description || "Описание товара отсутствует."}
+                    {product.description || "Product doesn't have description"}
                 </p>
 
                 <BuyButton product={product} addToCart={addToCart} />
 
                 <br /><br />
                 <button onClick={() => navigate(-1)} style={{ cursor: 'pointer', background: 'none', border: 'none', textDecoration: 'underline' }}>
-                    ← Вернуться назад
+                    ← Back
                 </button>
             </div>
         </div>
