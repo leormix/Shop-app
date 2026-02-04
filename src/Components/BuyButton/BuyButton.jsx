@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import '/src/Components/BuyButton/BuyButton.css'
 import confetti from 'canvas-confetti';
 
 export default function BuyButton({ product, addToCart }) {

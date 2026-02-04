@@ -1,14 +1,15 @@
-// App.jsx
 import { useState } from 'react'
 import './App.css'
 import HeaderTape from './Components/HeaderTape/HeaderTape'
 import Cart from '/src/Pages/Cart/Cart'
-import Pants from '/src/Pages/Pants'
-import Sweaters from './Pages/Sweaters'
-import Socks from './Pages/Socks'
-import Sneakers from './Pages/Sneakers'
+// import Pants from '/src/Pages/Categories/Pants/Pants'
+// import Sweaters from './Pages/Categories/Sweaters/Sweaters'
+// import Socks from './Pages/Categories/Socks/Socks'
+// import Sneakers from './Pages/Categories/Sneakers/Sneakers'
 import Profile from './Pages/Profile/Profile'
 import Navbar from './Components/Navbar/Navbar'
+import ProductPage from './Pages/ProductPage/ProductPage'
+import CategoryPage from './Pages/CategoryPage/CategoryPage'
 import { Route, Routes, useLocation } from 'react-router-dom'
 
 function App() {
@@ -72,30 +73,38 @@ function App() {
           )}
 
           <Routes>
-            <Route path='/pants'
-              element={<Pants addToCart={addToCart}></Pants>}></Route>
+            {/* Вместо Pants, Sweaters и т.д. используем CategoryPage */}
 
-            <Route path='/sweaters'
-              element={<Sweaters addToCart={addToCart}></Sweaters>}></Route>
+            {/* Страница штанов */}
+            <Route
+              path='/pants'
+              element={<CategoryPage categoryName="pants" addToCart={addToCart} />}
+            />
 
-            <Route path='/socks'
-              element={<Socks addToCart={addToCart}></Socks>}></Route>
+            {/* Страница свитеров */}
+            <Route
+              path='/sweaters'
+              element={<CategoryPage categoryName="sweaters" addToCart={addToCart} />}
+            />
 
-            <Route path='/sneakers'
-              element={<Sneakers addToCart={addToCart}></Sneakers>}></Route>
+            {/* Страница носков */}
+            <Route
+              path='/socks'
+              element={<CategoryPage categoryName="socks" addToCart={addToCart} />}
+            />
 
-            <Route path='/cart'
-              element={<Cart cart={cart} removeFromCart={removeFromCart} />}></Route>
+            {/* Страница кроссовок */}
+            <Route
+              path='/sneakers'
+              element={<CategoryPage categoryName="sneakers" addToCart={addToCart} />}
+            />
 
-            <Route path='/profile'
-              element={<Profile />}></Route>
-
-
+            {/* Остальные маршруты */}
+            <Route path='/cart' element={<Cart cart={cart} removeFromCart={removeFromCart} />}></Route>
+            <Route path='/profile' element={<Profile />}></Route>
+            <Route path='/product/:id' element={<ProductPage addToCart={addToCart} />}></Route>
 
           </Routes>
-
-
-
         </div>
       </div >
     </>

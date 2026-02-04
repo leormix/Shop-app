@@ -1,0 +1,18 @@
+    button {
+        padding: 12px 20px;
+        width: 100%;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 8px;
+        margin-top: auto;
+
+        transition: all 0.3s ease;
+
+        &.added {
+            background-color: #2ecc71;
+
+            color: white;
+            border-color: #2ecc71;
+            transform: scale(1.05);
+        }
+    }

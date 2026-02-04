@@ -1,6 +1,6 @@
 /* DropDown_menu.css */
 .nav-item-dropdown {
-  position: static;
+  position: relative;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8,6 +8,16 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
 }
 
 .nav-link {
@@ -39,12 +49,11 @@
 }
 
 .dropdown-menu {
-  position: fixed;
-  left: 50%;
-  width: 100vw;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  top: 120px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
   background-color: white;
   padding: 30px 0;
   border-top: 1px solid #e5e5e5;

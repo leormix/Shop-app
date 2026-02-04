@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import BuyButton from "../Components/BuyButton/BuyButton";
+import BuyButton from "../../../Components/BuyButton/BuyButton";
 
 const SWEATERS_TYPES = [
     { id: 1, name: "Blue sweater", price: 120, image: '/src/img/sweaters/blue-sweater.png' },

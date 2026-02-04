@@ -1,0 +1,17 @@
+button {
+  padding: 12px 20px;
+  width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+button.added {
+  background-color: #2ecc71;
+  color: white;
+  border-color: #2ecc71;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}

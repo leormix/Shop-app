@@ -57,6 +57,10 @@ body {
   color: black;
 }
 
+.category-name {
+  padding-bottom: 30px;
+}
+
 .main-photo-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -135,23 +139,6 @@ body {
 .card p {
   margin: 0;
   font-size: 1.1rem;
-}
-.card button {
-  padding: 12px 20px;
-  width: 100%;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 8px;
-  margin-top: auto;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.card button.added {
-  background-color: #2ecc71;
-  color: white;
-  border-color: #2ecc71;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
 }
 .card:hover {
   -webkit-transform: scale(1.03);
