@@ -1,4 +1,4 @@
-// import { products } from "../../../data/products";
+
 
 export function SearchHelper(products, searchText) {
 

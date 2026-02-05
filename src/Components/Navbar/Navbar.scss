@@ -53,7 +53,7 @@
 
 .actions {
   width: 200px;
-  display: flex;
+  display: flex;  
   justify-content: flex-end;
   align-items: center;
   gap: 20px;
@@ -67,6 +67,7 @@
     border-radius: 10px;
 
     input {
+      width: 10vw;
       border: none;
       background: transparent;
       outline: none;
@@ -225,8 +226,12 @@
 
   .search-box input {
 
-    width: 40px;
-    display: none;
+
+    ::placeholder{
+      color: transparent;
+      opacity: 0;
+    }
+    // display: none;
     
 
   }
@@ -249,7 +254,10 @@
 @media only screen and (max-device-width: 353px){
   .search-box{
     input{
-      display: none;
+      max-width: 10px;
+    }
+    ::placeholder {
+      color: transparent;
     }
   }
 
