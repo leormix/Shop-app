@@ -15,12 +15,18 @@
 }
 
 .product-image {
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.product-image:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .product-image img {
@@ -70,13 +76,12 @@
 }
 
 .back-btn {
-  margin-top: 20px;
   background: none;
   border: none;
   cursor: pointer;
   text-decoration: underline;
   color: #000;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 900px) {

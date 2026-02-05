@@ -34,7 +34,7 @@ export default function Profile() {
                 <div className="form-content">
                     <h1>JOIN THE CLUB</h1>
                     <p>Get instant access to the best products.</p>
-                    <button className="btn-black">
+                    <button className="btn-black btn-reg">
                         REGISTER <span>&rarr;</span>
                     </button>
                 </div>

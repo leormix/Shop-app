@@ -1,5 +1,5 @@
 export const products = [
-    // --- Sweaters ---
+
     {
         id: 1,
         category: 'sweaters',
@@ -103,7 +103,7 @@ export const products = [
     {
         id: 13,
         category: 'sneakers',
-        name: "Dark Asics",
+        name: "Asics dark",
         price: 160,
         image: '/src/img/sneakers/dark_gray_sneakers_asics.png',
         description: "Professional foot support and Gel technology. For long distances."

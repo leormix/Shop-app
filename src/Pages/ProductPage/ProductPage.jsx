@@ -15,7 +15,7 @@ export default function ProductPage({ addToCart }) {
         return (
             <div style={{ padding: '20px', textAlign: 'center' }}>
                 <h2>Product not found</h2>
-                <button onClick={() => navigate(-1)}>Назад</button>
+                <button onClick={() => navigate(-1)}>Back</button>
             </div>
         );
     }
@@ -42,7 +42,7 @@ export default function ProductPage({ addToCart }) {
                 <BuyButton product={product} addToCart={addToCart} />
 
                 <br /><br />
-                <button onClick={() => navigate(-1)} style={{ cursor: 'pointer', background: 'none', border: 'none', textDecoration: 'underline' }}>
+                <button onClick={() => navigate(-1)} style={{ cursor: 'pointer', background: 'none', border: 'none', textDecoration: 'none' }}>
                     ← Back
                 </button>
             </div>

@@ -13,12 +13,12 @@ export default function Navbar({ cartCount }) {
 
             <div className="main-bar">
 
-                {/* MOBILE */}
+
                 <div className="mobile-menu-trigger">
                     <Hamburger />
                 </div>
 
-                {/* LOGO */}
+
                 <Link to="/" className="logo">MY SHOP</Link>
 
                 {/* DESKTOP NAV */}
@@ -45,7 +45,7 @@ export default function Navbar({ cartCount }) {
                     </div>
                 </div>
 
-                {/* 🔥 MEGA MENU — ВАЖНО: ВНЕ nav */}
+
                 <Dropdown_menu
                     isDropdown
                     activeMenu={activeMenu}
@@ -53,6 +53,6 @@ export default function Navbar({ cartCount }) {
                 />
 
             </div>
-        </header>
+        </header >
     )
 }

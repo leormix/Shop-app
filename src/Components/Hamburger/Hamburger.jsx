@@ -38,7 +38,8 @@ export default function Hamburger() {
         {
             category: 'Men',
             items: [
-                { name: 'All Men', link: '/Men' },
+
+                { name: 'Sneakers', link: '/Sneakers' },
                 { name: 'Pants', link: '/Pants' },
                 { name: 'Sweaters', link: '/Sweaters' },
                 { name: 'Socks', link: '/Socks' }
@@ -55,8 +56,8 @@ export default function Hamburger() {
         {
             category: 'Kids',
             items: [
-                { name: 'All Kids', link: '/Kids' },
-                { name: 'Toys', link: '/Toys' }
+                { name: 'Toys', link: '/Toys' },
+                { name: 'Socks', link: '/Socks' }
             ]
         }
     ];

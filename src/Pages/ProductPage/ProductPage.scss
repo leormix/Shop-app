@@ -10,9 +10,13 @@
 }
 
 .product-image {
+    transition: all 0.1s ease;
     flex: 1;                   
     display: flex;             
-    // justify-content: flex-end; 
+
+    &:hover{
+        transform: scale(1.05);
+    }
 }
 
 .product-image img {
@@ -31,6 +35,7 @@
     
     text-align: center;          
 }
+
 
 
 .product-info h1 {
@@ -57,13 +62,12 @@
 
 
 .back-btn {
-    margin-top: 20px;
     background: none;
     border: none;
     cursor: pointer;
     text-decoration: underline;
     color: #000;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 

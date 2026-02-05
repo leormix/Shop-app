@@ -73,6 +73,10 @@ h1 {
     margin: 0;
 }
 
+.btn-reg{
+    margin-top: 0;
+}
+
 .forgot-pass {
     color: #000;
     text-decoration: underline;
@@ -85,6 +89,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 15px;
+
 }
 
 input {
@@ -92,6 +97,7 @@ input {
     border: 1px solid #767676;
     font-size: 16px;
     outline: none;
+    border-radius: 10px;
 }
 
 input:focus {

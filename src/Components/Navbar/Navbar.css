@@ -58,8 +58,9 @@
   display: -ms-flexbox;
   display: flex;
   background: #f0f0f0;
-  padding: 5px 10px;
+  padding: 0px 10px;
   border-radius: 4px;
+  border-radius: 10px;
 }
 .actions .search-box input {
   border: none;
