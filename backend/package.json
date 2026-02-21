@@ -1,6 +1,10 @@
 {
     "type": "commonjs",
     "dependencies": {
+        "@nestjs/config": "^4.0.3",
         "@nestjs/platform-express": "^11.1.14"
+    },
+    "devDependencies": {
+        "@types/pg": "^8.16.0"
     }
 }

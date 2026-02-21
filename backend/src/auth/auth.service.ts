@@ -1,26 +1,43 @@
-import { ConflictException, ForbiddenException, Injectable } from '@nestjs/common';
+import { ConflictException, ForbiddenException, Injectable, BadRequestException } from '@nestjs/common';
 import { CreateAuthDto } from './dto/create-auth.dto';
 import { UpdateAuthDto } from './dto/update-auth.dto';
 import * as bcrypt from 'bcrypt'
 import { PrismaService } from 'src/prisma.service';
+
 
 @Injectable()
 export class AuthService {
 
   constructor(private prisma: PrismaService) { }
 
-
-
   async register(email: string, username: string, pass: string) {
 
-    const password = await bcrypt.hash(pass, 10)
-    const userExist = await this.prisma.user.findUnique({
+    if (!email || !pass) {
+      throw new BadRequestException('Email and password are neccesary');
+    }
+
+    const userExist = await this.prisma.user.findFirst({
       where: { email }
     })
 
     if (userExist) {
       throw new ConflictException('User is already exist ')
     }
+
+    const hashed_password = await bcrypt.hash(pass, 10)
+
+    return this.prisma.user.create({
+      data: {
+        email,
+        username,
+        password: hashed_password,
+      },
+      select: {
+        id: true,
+        email: true,
+        username: true,
+      }
+    })
 
   }
 
