@@ -10,7 +10,7 @@ export class AuthService {
 
   constructor(private prisma: PrismaService) { }
 
-  async register(email: string, username: string, pass: string) {
+  async register(email: string, pass: string) {
 
     if (!email || !pass) {
       throw new BadRequestException('Email and password are neccesary');
@@ -29,16 +29,19 @@ export class AuthService {
     return this.prisma.user.create({
       data: {
         email,
-        username,
         password: hashed_password,
       },
       select: {
         id: true,
         email: true,
-        username: true,
       }
     })
+  }
 
+  async login(email: string, pass: string) {
+    if (!email || !pass) {
+      throw new BadRequestException('Email and password are neccesary');
+    }
   }
 
   findAll() {
