@@ -1,14 +1,16 @@
 import { ConflictException, ForbiddenException, Injectable, BadRequestException, UnauthorizedException } from '@nestjs/common';
-import { CreateAuthDto } from './dto/create-auth.dto';
-import { UpdateAuthDto } from './dto/update-auth.dto';
 import * as bcrypt from 'bcrypt'
+import { JwtService } from '@nestjs/jwt';
 import { PrismaService } from 'src/prisma.service';
 
 
 @Injectable()
 export class AuthService {
 
-  constructor(private prisma: PrismaService) { }
+  constructor(
+    private prisma: PrismaService,
+    private jwtToken: JwtService
+  ) { }
 
   async register(email: string, pass: string) {
 
@@ -57,9 +59,10 @@ export class AuthService {
       throw new UnauthorizedException('Wrong password')
     }
 
+    const payload = { sub: userExist.id, email: userExist.email }
+
     return {
-      id: userExist.id,
-      email: userExist.email
+      acces_token: await this.jwtToken.signAsync(payload)
     }
   }
 }
