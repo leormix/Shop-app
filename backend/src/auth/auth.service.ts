@@ -1,4 +1,4 @@
-import { ConflictException, ForbiddenException, Injectable, BadRequestException } from '@nestjs/common';
+import { ConflictException, ForbiddenException, Injectable, BadRequestException, UnauthorizedException } from '@nestjs/common';
 import { CreateAuthDto } from './dto/create-auth.dto';
 import { UpdateAuthDto } from './dto/update-auth.dto';
 import * as bcrypt from 'bcrypt'
@@ -42,21 +42,24 @@ export class AuthService {
     if (!email || !pass) {
       throw new BadRequestException('Email and password are neccesary');
     }
-  }
 
-  findAll() {
-    return `This action returns all auth`;
-  }
+    const userExist = await this.prisma.user.findUnique({
+      where: { email }
+    })
 
-  findOne(id: number) {
-    return `This action returns a #${id} auth`;
-  }
+    if (!userExist) {
+      throw new UnauthorizedException('User doesnt exist');
+    }
 
-  update(id: number, updateAuthDto: UpdateAuthDto) {
-    return `This action updates a #${id} auth`;
-  }
+    const isPasswordValid = await bcrypt.compare(pass, userExist.password)
 
-  remove(id: number) {
-    return `This action removes a #${id} auth`;
+    if (!isPasswordValid) {
+      throw new UnauthorizedException('Wrong password')
+    }
+
+    return {
+      id: userExist.id,
+      email: userExist.email
+    }
   }
 }
