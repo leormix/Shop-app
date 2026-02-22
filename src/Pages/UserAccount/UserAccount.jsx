@@ -31,7 +31,7 @@ export default function UserAccount() {
                 });
 
                 if (!response.ok) {
-                    throw new Error('Сессия истекла. Пожалуйста, войдите заново.');
+                    throw new Error('Session expired. You need new token.');
                 }
 
                 const data = await response.json();
@@ -79,7 +79,7 @@ export default function UserAccount() {
 
             {userData && (
                 <div style={{ background: '#f5f5f5', padding: '20px', borderRadius: '8px', marginBottom: '40px' }}>
-                    <h3>Информация о пользователе</h3>
+                    <h3>User information</h3>
                     <p><strong>Email:</strong> {userData.email}</p>
                     <p><strong>ID:</strong> {userData.id}</p>
                 </div>
