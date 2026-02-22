@@ -64,7 +64,7 @@ export default function UserAccount() {
         <div style={{ padding: '40px', maxWidth: '800px', margin: '0 auto', fontFamily: 'sans-serif' }}>
 
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '30px' }}>
-                <h1>Мой аккаунт</h1>
+                <h1>My acc</h1>
                 <button
                     onClick={handleLogout}
                     style={{ background: 'black', color: 'white', padding: '10px 20px', border: 'none', cursor: 'pointer' }}
@@ -88,8 +88,8 @@ export default function UserAccount() {
             <div>
                 <h2>Моя корзина</h2>
                 <div style={{ border: '2px dashed #ccc', padding: '50px', textAlign: 'center', color: '#666' }}>
-                    Ваша корзина пока пуста. <br />
-                    <em>(Здесь мы будем выводить товары, когда настроим базу данных для продуктов)</em>
+                    Your cart is empty. <br />
+
                 </div>
             </div>
 
