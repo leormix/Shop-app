@@ -2,15 +2,12 @@ import { useState } from 'react'
 import './App.css'
 import HeaderTape from './Components/HeaderTape/HeaderTape'
 import Cart from '/src/Pages/Cart/Cart'
-// import Pants from '/src/Pages/Categories/Pants/Pants'
-// import Sweaters from './Pages/Categories/Sweaters/Sweaters'
-// import Socks from './Pages/Categories/Socks/Socks'
-// import Sneakers from './Pages/Categories/Sneakers/Sneakers'
 import Profile from './Pages/Profile/Profile'
 import Navbar from './Components/Navbar/Navbar'
 import ProductPage from './Pages/ProductPage/ProductPage'
 import CategoryPage from './Pages/CategoryPage/CategoryPage'
 import { Route, Routes, useLocation } from 'react-router-dom'
+import UserAccount from './Pages/UserAccount/UserAccount'
 
 function App() {
   // const location = useLocation()
@@ -73,39 +70,38 @@ function App() {
           )}
 
           <Routes>
-            {/* Вместо Pants, Sweaters и т.д. используем CategoryPage */}
 
-            {/* Страница штанов */}
+
+
             <Route
               path='/pants'
               element={<CategoryPage categoryName="pants" addToCart={addToCart} />}
             />
 
-            {/* Страница свитеров */}
+
             <Route
               path='/sweaters'
               element={<CategoryPage categoryName="sweaters" addToCart={addToCart} />}
             />
 
-            {/* Страница носков */}
+
             <Route
               path='/socks'
               element={<CategoryPage categoryName="socks" addToCart={addToCart} />}
             />
 
-            {/* Страница кроссовок */}
             <Route
               path='/sneakers'
               element={<CategoryPage categoryName="sneakers" addToCart={addToCart} />}
             />
 
-            {/* Остальные маршруты */}
+
             <Route path='/cart' element={<Cart cart={cart} removeFromCart={removeFromCart} />}></Route>
             <Route path='/profile' element={<Profile />}></Route>
             <Route path='/product/:id' element={<ProductPage addToCart={addToCart} />}></Route>
-
+            <Route path='/user-account' element={<UserAccount></UserAccount>}></Route>
           </Routes>
-        </div>
+        </div >
       </div >
     </>
   )

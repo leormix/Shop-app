@@ -62,7 +62,7 @@ export class AuthService {
     const payload = { sub: userExist.id, email: userExist.email }
 
     return {
-      acces_token: await this.jwtToken.signAsync(payload)
+      access_token: await this.jwtToken.signAsync(payload)
     }
   }
 }
